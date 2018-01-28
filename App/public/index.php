@@ -35,6 +35,10 @@ try {
     $response = (string) $controllerInstance->$actionMethodName();
     die($response);
 }
+catch (Throwable $t) {
+    http_response_code(500);
+    die('Server error');
+}
 catch (Exception $e) {
     http_response_code(500);
     die('Server error');
