@@ -18,6 +18,12 @@ if (!class_exists($controllerClassName)) {
     die('Page not found');
 }
 
+$reflection = new ReflectionClass($controllerClassName);
+if (!$reflection->isInstantiable()) {
+    http_response_code(404);
+    die('Page not found');
+}
+
 $controllerInstance = new $controllerClassName;
 
 if (!is_callable([$controllerInstance, $actionMethodName])) {
@@ -29,7 +35,7 @@ try {
     $response = (string) $controllerInstance->$actionMethodName();
     die($response);
 }
-catch (\Exception $e) {
+catch (Exception $e) {
     http_response_code(500);
     die('Server error');
 }
