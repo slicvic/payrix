@@ -6,6 +6,9 @@
             "email": "vmlantigua@gmail.com"
         }
     ],
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    },
     "autoload": {
        "psr-4": {
            "": ""

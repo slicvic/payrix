@@ -32,6 +32,9 @@ if (!is_callable([$controllerInstance, $actionMethodName])) {
 }
 
 try {
+    $dotenv = new \Dotenv\Dotenv(APPPATH);
+    $dotenv->load();
+
     $response = (string) $controllerInstance->$actionMethodName();
     die($response);
 }
