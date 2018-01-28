@@ -43,6 +43,6 @@ class User extends Model
             $errors[] = 'The password must be at least 6 characters long';
         }
 
-        return  (empty($errors)) ? true : $errors;
+        return  (count($errors)) ? $errors : true;
     }
 }
