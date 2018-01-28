@@ -1,5 +1,4 @@
 <?php
-
 error_reporting(0);
 
 define('BASEPATH', realpath(__DIR__ . '/../../') . '/');
@@ -25,16 +24,14 @@ if (!$reflection->isInstantiable()) {
 }
 
 $controllerInstance = new $controllerClassName;
-
 if (!is_callable([$controllerInstance, $actionMethodName])) {
     http_response_code(404);
     die('Page not found');
 }
 
-try {
-    $dotenv = new \Dotenv\Dotenv(APPPATH);
-    $dotenv->load();
+(new Dotenv\Dotenv(APPPATH))->load();
 
+try {
     $response = (string) $controllerInstance->$actionMethodName();
     die($response);
 }
