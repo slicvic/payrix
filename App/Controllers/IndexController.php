@@ -6,8 +6,6 @@ class IndexController extends BaseController
 {
     public function indexAction()
     {
-        return $this->view('index/index.html', [
-            'greeting' => 'Hello, World!'
-        ]);
+        return $this->view('signup/form.html');
     }
 }
