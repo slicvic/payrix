@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.43-0ubuntu0.14.04.1)
 # Database: payrix
-# Generation Time: 2018-01-28 22:37:24 +0000
+# Generation Time: 2018-01-28 22:41:28 +0000
 # ************************************************************
 
 
@@ -54,6 +54,15 @@ CREATE TABLE `users` (
   KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `created_at`, `updated_at`)
+VALUES
+	(5,'victor lantigua','slicvic','$2y$10$lluEl7tS65rFj08T6LhJJOj8zl1IZmlLqMQz0oIW.LO/7nQr5ALJO','2018-01-28 22:42:30',NULL);
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
