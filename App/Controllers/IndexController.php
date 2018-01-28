@@ -2,16 +2,12 @@
 
 namespace App\Controllers;
 
-use App\View\View;
-
-class IndexController
+class IndexController extends BaseController
 {
     public function indexAction()
     {
-        $view = new View(VIEWPATH . 'index/index.html', [
+        return $this->view('index/index.html', [
             'greeting' => 'Hello, World!'
         ]);
-
-        return $view->render();
     }
 }
