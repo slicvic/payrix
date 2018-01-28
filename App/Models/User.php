@@ -32,15 +32,15 @@ class User extends Model
         $errors = [];
 
         if (!is_string($this->fullname) || empty($this->fullname)) {
-            $errors[] = 'The full name is required';
+            $errors[] = 'The full name is required.';
         }
 
         if (!is_string($this->username) || empty($this->username)) {
-            $errors[] = 'The username is required';
+            $errors[] = 'The username is required.';
         }
 
         if (!is_string($this->password) || strlen($this->password) < 6) {
-            $errors[] = 'The password must be at least 6 characters long';
+            $errors[] = 'The password must be at least 6 characters long.';
         }
 
         return  (count($errors)) ? $errors : true;
