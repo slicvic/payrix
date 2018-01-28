@@ -10,6 +10,7 @@ class UserRepository extends Repository
 {
     /**
      * @param  User $user
+     * @return bool
      * @throws ValidationException
      * @throws UsernameAlreadyTakenException
      */
@@ -35,13 +36,11 @@ class UserRepository extends Repository
                 created_at = NOW()
         ');
 
-        $result = $stmt->execute([
+        return $stmt->execute([
             $user->fullname,
             $user->username,
             $user->password
         ]);
-
-        return $result;
     }
 
     /**
@@ -52,6 +51,6 @@ class UserRepository extends Repository
         $stmt = static::getDb()->prepare('SELECT * FROM users WHERE username = ?');
         $stmt->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\User');
         $stmt->execute([$username]);
-        return $results = $stmt->fetch();
+        return $stmt->fetch();
     }
 }
