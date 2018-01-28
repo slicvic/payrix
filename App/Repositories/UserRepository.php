@@ -9,7 +9,7 @@ use App\Exceptions\ValidationException;
 class UserRepository extends Repository
 {
     /**
-     * @param  User   $user
+     * @param  User $user
      * @throws ValidationException
      * @throws UsernameAlreadyTakenException
      */

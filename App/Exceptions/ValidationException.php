@@ -5,7 +5,7 @@ namespace App\Exceptions;
 class ValidationException extends \Exception
 {
     /**
-     * @var errors
+     * @var array
      */
     protected $errors;
 
