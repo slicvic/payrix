@@ -16,4 +16,10 @@ abstract class BaseController
 
         return $layout->render();
     }
+
+    public function redirect(string $url)
+    {
+        header("Location: $url");
+        exit;
+    }
 }
