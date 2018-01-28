@@ -1,0 +1,14 @@
+{
+    "name": "vagrant/payrix",
+    "authors": [
+        {
+            "name": "Victor Lantigua",
+            "email": "vmlantigua@gmail.com"
+        }
+    ],
+    "autoload": {
+       "psr-4": {
+           "": ""
+       }
+    }
+}
