@@ -2,10 +2,16 @@
 
 namespace App\Controllers;
 
+use App\View\View;
+
 class IndexController
 {
     public function indexAction()
     {
-        return 'Hello, World!';
+        $view = new View(VIEWPATH . 'index/index.html', [
+            'greeting' => 'Hello, World!'
+        ]);
+
+        return $view->render();
     }
 }

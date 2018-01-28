@@ -4,6 +4,7 @@ error_reporting(0);
 
 define('BASEPATH', realpath(__DIR__ . '/../../') . '/');
 define('APPPATH', BASEPATH . 'App/');
+define('VIEWPATH', APPPATH . 'views/');
 
 require_once BASEPATH . 'vendor/autoload.php';
 
@@ -27,7 +28,8 @@ if (!is_callable([$controllerInstance, $actionMethodName])) {
 try {
     $response = (string) $controllerInstance->$actionMethodName();
     die($response);
-} catch (\Exception $e) {
+}
+catch (\Exception $e) {
     http_response_code(500);
     die('Server error');
 }
