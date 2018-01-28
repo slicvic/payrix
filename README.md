@@ -3,8 +3,6 @@ A demo project built from scratch using a custom written MVC framework.
 
 ## Requirements
 
-All you need is PHP 7.1.0+ and [Composer](https://getcomposer.org/) for autoload dependencies.
-
 * PHP 7.1.0+
 * Composer
 
