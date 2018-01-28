@@ -1,4 +1,5 @@
 # Payrix
+A PayFac built using a custom MVC framework written from scratch.
 
 ## Requirements
 
