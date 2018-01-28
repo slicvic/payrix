@@ -10,6 +10,10 @@ abstract class BaseController
     {
         $view = new View(VIEWPATH . $file, $vars);
 
-        return $view->render();
+        $layout = new View(VIEWPATH . 'layout.html', [
+            'content' => $view->render()
+        ]);
+
+        return $layout->render();
     }
 }
