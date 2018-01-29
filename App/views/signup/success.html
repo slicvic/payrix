@@ -1,6 +1,9 @@
 <div class="alert alert-success text-center">
-    <h3 class="alert-heading">
+    <div class="display-3">
+        <i class="fa fa-check-circle-o"></i>
+    </div>
+    <h2 class="alert-heading mb-3 mt-2">
         Congrats, <?= isset($_GET['user']) ? ucwords(strtolower(htmlspecialchars($_GET['user']))) : '' ?>!
-    </h3>
-    <h6>Your account is created!</h6>
+    </h2>
+    <div class="lead">Your account is created!</div>
 </div>

@@ -1,14 +1,14 @@
 <h1 class="text-center mb-4">Sign Up</h1>
 
 <?php if (!empty($error)) { ?>
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">Oops!</h4>
+    <div class="alert alert-danger">
+        <h4 class="alert-heading mb-3">Oops!</h4>
         <?php if (is_array($error)) { ?>
             <?php foreach ($error as $err) { ?>
-                <p><?= $err ?></p>
+                <p><i class="fa fa-times-circle"></i> <?= $err ?></p>
             <?php } ?>
         <?php } else { ?>
-            <?= $error ?>
+            <i class="fa fa-times-circle"></i> <?= $error ?>
         <?php } ?>
     </div>
 <?php } ?>
