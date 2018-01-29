@@ -25,7 +25,7 @@ class User extends Model
     public $password;
 
     /**
-     * @return true|array
+     * {@inheritdoc}
      */
     public function valid()
     {

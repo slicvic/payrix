@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-abstract class Model
+abstract class Model implements ModelInterface
 {
 
 }
