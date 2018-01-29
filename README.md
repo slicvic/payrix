@@ -7,7 +7,7 @@ A demo project built from scratch using a custom written MVC framework.
 * Composer
 
 ## Web App
-http://52.26.218.28/
+http://payrix.slicvic.com
 
 ## CLI
 
