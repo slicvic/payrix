@@ -1,5 +1,5 @@
 # Payrix
-A demo project built from scratch using a custom written MVC framework.
+A demo project built from scratch, including custom MVC framework.
 
 ## Requirements
 
